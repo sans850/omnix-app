@@ -28,6 +28,23 @@ from modules.friends import listar_pedidos_recebidos
 st.set_page_config(
     page_title="OMNIX",
     page_icon="omnix_icon.png" if Path("omnix_icon.png")
+import json as _json_st
+from pathlib import Path as _Path_st
+_st_file = _Path_st("omnix_online_status.json")
+if _st_file.exists():
+    try:
+        _st_data = _json_st.loads(_st_file.read_text(encoding="utf-8"))
+        if not _st_data.get("online", True):
+            st.markdown("""
+            <div style="text-align:center; padding:80px 20px; font-family:sans-serif;">
+                <h1 style="color:#A855F7; margin-bottom:8px;">OMNIX Offline</h1>
+                <p style="color:#94A3B8; font-size:16px;">O servidor online está temporariamente desativado pelo administrador.</p>
+                <p style="color:#64748B; font-size:13px;">Tente novamente mais tarde quando o painel for iniciado.</p>
+            </div>
+            """, unsafe_allow_html=True)
+            st.stop()
+    except Exception:
+        pass
 st.markdown('''<style>
 [data-testid="stAppViewContainer"], .main, .block-container {
     visibility: visible !important;
@@ -48,7 +65,7 @@ _stc.html("""
   };
 })();
 </script>
-""", height=0, width=0).exists() else "âš¡",
+""", height=0, width=0).exists() else "Ã¢Å¡Â¡",
     layout="wide",
     initial_sidebar_state="collapsed"
 )
@@ -139,7 +156,7 @@ if "logado" not in st.session_state:
     st.session_state.usuario_id = None
 
 if "cat_ativa" not in st.session_state:
-    st.session_state.cat_ativa = "InÃ­cio"
+    st.session_state.cat_ativa = "InÃƒÂ­cio"
 
 qp_user = st.query_params.get("u", "")
 qp_token = st.query_params.get("t", "")
@@ -166,15 +183,15 @@ if not st.session_state.logado or st.session_state.usuario_id not in USUARIOS:
             st.markdown(
                 "<div style='text-align:center; padding:4px 0 10px 0;'>"
                 "<div class='omnix-logo'>OMNIX</div>"
-                "<div style='color:#94A3B8; font-size:0.86rem; margin-top:4px;'>Plataforma Integrada â€¢ Minimalista & Privada</div>"
+                "<div style='color:#94A3B8; font-size:0.86rem; margin-top:4px;'>Plataforma Integrada Ã¢â‚¬Â¢ Minimalista & Privada</div>"
                 "</div>",
                 unsafe_allow_html=True
             )
-            t_in, t_reg = st.tabs(["ðŸ”‘ Entrar", "ðŸ“ Criar Conta"])
+            t_in, t_reg = st.tabs(["Ã°Å¸â€â€˜ Entrar", "Ã°Å¸â€œÂ Criar Conta"])
             with t_in:
-                u_in = st.text_input("UsuÃ¡rio", key="l_u").strip().lower()
+                u_in = st.text_input("UsuÃƒÂ¡rio", key="l_u").strip().lower()
                 p_in = st.text_input("Senha", type="password", key="l_p")
-                lembrar = st.checkbox("Manter sessÃ£o ativa", value=True)
+                lembrar = st.checkbox("Manter sessÃƒÂ£o ativa", value=True)
                 if st.button("Acessar OMNIX", type="primary", width="stretch"):
                     if u_in in USUARIOS and USUARIOS[u_in]["senha"] == p_in:
                         st.session_state.logado = True
@@ -186,23 +203,23 @@ if not st.session_state.logado or st.session_state.usuario_id not in USUARIOS:
                             time.sleep(0.25)
                         st.rerun()
                     else:
-                        st.error("Credenciais invÃ¡lidas.")
+                        st.error("Credenciais invÃƒÂ¡lidas.")
             with t_reg:
                 with st.form("f_reg_clean", clear_on_submit=True):
-                    r_nome = st.text_input("Nome de ExibiÃ§Ã£o").strip()
-                    r_user = st.text_input("Login (sem espaÃ§os)").strip().lower()
-                    r_num = st.text_input("NÃºmero OMNIX (3 a 10 dÃ­gitos)").strip()
+                    r_nome = st.text_input("Nome de ExibiÃƒÂ§ÃƒÂ£o").strip()
+                    r_user = st.text_input("Login (sem espaÃƒÂ§os)").strip().lower()
+                    r_num = st.text_input("NÃƒÂºmero OMNIX (3 a 10 dÃƒÂ­gitos)").strip()
                     r_pass = st.text_input("Senha", type="password")
                     r_pass2 = st.text_input("Confirmar Senha", type="password")
                     if st.form_submit_button("Concluir Cadastro", type="primary", width="stretch"):
                         if not r_nome or not r_user or not r_pass or not r_num:
                             st.warning("Preencha todos os campos.")
                         elif " " in r_user or not r_num.isdigit() or len(r_num) < 3:
-                            st.warning("Verifique o formato do login e do nÃºmero.")
+                            st.warning("Verifique o formato do login e do nÃƒÂºmero.")
                         elif r_user in USUARIOS or numero_ja_existe(r_num):
-                            st.error("Login ou NÃºmero OMNIX jÃ¡ cadastrado.")
+                            st.error("Login ou NÃƒÂºmero OMNIX jÃƒÂ¡ cadastrado.")
                         elif r_pass != r_pass2:
-                            st.error("As senhas nÃ£o coincidem.")
+                            st.error("As senhas nÃƒÂ£o coincidem.")
                         else:
                             USUARIOS[r_user] = {
                                 "senha": r_pass, "cargo": "membro", "nome": r_nome,
@@ -227,7 +244,7 @@ if user.get("cargo") == "admin" and st.session_state.get("qa_step_state"):
 notificacoes, nao_lidas = obter_notificacoes_usuario(usuario_id)
 qtd_ped = len(listar_pedidos_recebidos(usuario_id))
 
-# CabeÃ§alho Compacto: Identidade + Nome Ã  esquerda; Apenas Ã­cones Ã  direita
+# CabeÃƒÂ§alho Compacto: Identidade + Nome ÃƒÂ  esquerda; Apenas ÃƒÂ­cones ÃƒÂ  direita
 h_left, h_right = st.columns([4.2, 1.8])
 with h_left:
     if Path("omnix_icon.png").exists():
@@ -236,41 +253,41 @@ with h_left:
         c_brand.markdown("<div class='omnix-logo' style='padding-top:3px;'>OMNIX</div>", unsafe_allow_html=True)
     else:
         c_brand, c_user_info = st.columns([1.2, 3.8])
-        c_brand.markdown("<div class='omnix-logo'>âš¡ OMNIX</div>", unsafe_allow_html=True)
+        c_brand.markdown("<div class='omnix-logo'>Ã¢Å¡Â¡ OMNIX</div>", unsafe_allow_html=True)
     c_user_info.markdown(
         f"<div style='padding-top:5px; color:#E2E8F0; font-size:0.92rem;'>"
-        f"OlÃ¡, <b>{user['nome']}</b> <span style='color:#64748B;'>â€¢ Conectado</span></div>",
+        f"OlÃƒÂ¡, <b>{user['nome']}</b> <span style='color:#64748B;'>Ã¢â‚¬Â¢ Conectado</span></div>",
         unsafe_allow_html=True
     )
 
 with h_right:
     b_notif, b_cfg, b_prof = st.columns(3)
     with b_notif:
-        lbl_n = f"ðŸ”” {nao_lidas}" if nao_lidas > 0 else "ðŸ””"
-        if st.button(lbl_n, key="hdr_notif", type="primary" if st.session_state.cat_ativa == "NotificaÃ§Ãµes" else "secondary", width="stretch", help="NotificaÃ§Ãµes"):
-            st.session_state.cat_ativa = "NotificaÃ§Ãµes"
+        lbl_n = f"Ã°Å¸â€â€ {nao_lidas}" if nao_lidas > 0 else "Ã°Å¸â€â€"
+        if st.button(lbl_n, key="hdr_notif", type="primary" if st.session_state.cat_ativa == "NotificaÃƒÂ§ÃƒÂµes" else "secondary", width="stretch", help="NotificaÃƒÂ§ÃƒÂµes"):
+            st.session_state.cat_ativa = "NotificaÃƒÂ§ÃƒÂµes"
             st.rerun()
     with b_cfg:
-        if st.button("âš™ï¸", key="hdr_cfg", type="primary" if st.session_state.cat_ativa == "ConfiguraÃ§Ãµes" else "secondary", width="stretch", help="ConfiguraÃ§Ãµes"):
-            st.session_state.cat_ativa = "ConfiguraÃ§Ãµes"
+        if st.button("Ã¢Å¡â„¢Ã¯Â¸Â", key="hdr_cfg", type="primary" if st.session_state.cat_ativa == "ConfiguraÃƒÂ§ÃƒÂµes" else "secondary", width="stretch", help="ConfiguraÃƒÂ§ÃƒÂµes"):
+            st.session_state.cat_ativa = "ConfiguraÃƒÂ§ÃƒÂµes"
             st.rerun()
     with b_prof:
-        with st.popover("ðŸ‘¤", width="stretch"):
+        with st.popover("Ã°Å¸â€˜Â¤", width="stretch"):
             st.markdown(f"**{user['nome']}**")
             st.caption(f"Identificador: `@{usuario_id}`")
-            st.caption(f"NÃºmero OMNIX: `#{user.get('numero', '0000')}`")
-            st.caption(f"PermissÃµes: `{user['cargo'].upper()}`")
+            st.caption(f"NÃƒÂºmero OMNIX: `#{user.get('numero', '0000')}`")
+            st.caption(f"PermissÃƒÂµes: `{user['cargo'].upper()}`")
             st.divider()
-            if st.button("ðŸ‘¤ Abrir Meu Perfil", key="pop_my_prof", width="stretch"):
+            if st.button("Ã°Å¸â€˜Â¤ Abrir Meu Perfil", key="pop_my_prof", width="stretch"):
                 st.session_state["perfil_visitado_rapido"] = usuario_id
-                st.session_state["radio_sub_social"] = "ðŸ‘¤ Perfil & Membros"
+                st.session_state["radio_sub_social"] = "Ã°Å¸â€˜Â¤ Perfil & Membros"
                 st.session_state.cat_ativa = "Social"
                 st.rerun()
             if user["cargo"] == "admin":
-                if st.button("ðŸ›¡ï¸ AdministraÃ§Ã£o", key="pop_admin", width="stretch"):
-                    st.session_state.cat_ativa = "AdministraÃ§Ã£o"
+                if st.button("Ã°Å¸â€ºÂ¡Ã¯Â¸Â AdministraÃƒÂ§ÃƒÂ£o", key="pop_admin", width="stretch"):
+                    st.session_state.cat_ativa = "AdministraÃƒÂ§ÃƒÂ£o"
                     st.rerun()
-            if st.button("ðŸšª Encerrar SessÃ£o", key="pop_logout", width="stretch"):
+            if st.button("Ã°Å¸Å¡Âª Encerrar SessÃƒÂ£o", key="pop_logout", width="stretch"):
                 cookies.remove("omnix_user")
                 st.query_params.clear()
                 st.session_state.logado = False
@@ -279,11 +296,11 @@ with h_right:
                 st.rerun()
 
 categorias = [
-    ("ðŸ  InÃ­cio", "InÃ­cio"), ("ðŸ’¬ Chat", "Chat"),
-    (f"ðŸ‘¥ Social ({qtd_ped})" if qtd_ped > 0 else "ðŸ‘¥ Social", "Social"),
-    ("ðŸŽ¬ MÃ­dia", "MultimÃ­dia"),
-    ("ðŸ“ Arquivos", "Arquivos"),
-    ("âœ¨ IA", "InteligÃªncia Artificial")
+    ("Ã°Å¸ÂÂ  InÃƒÂ­cio", "InÃƒÂ­cio"), ("Ã°Å¸â€™Â¬ Chat", "Chat"),
+    (f"Ã°Å¸â€˜Â¥ Social ({qtd_ped})" if qtd_ped > 0 else "Ã°Å¸â€˜Â¥ Social", "Social"),
+    ("Ã°Å¸Å½Â¬ MÃƒÂ­dia", "MultimÃƒÂ­dia"),
+    ("Ã°Å¸â€œÂ Arquivos", "Arquivos"),
+    ("Ã¢Å“Â¨ IA", "InteligÃƒÂªncia Artificial")
 ]
 
 nav_cols = st.columns(len(categorias))
@@ -297,7 +314,7 @@ st.markdown("<hr style='margin:6px 0 14px 0; border:none; border-top:1px solid r
 
 cat = st.session_state.cat_ativa
 
-if cat == "InÃ­cio":
+if cat == "InÃƒÂ­cio":
     render_navegar(usuario_id, user, STORAGE_DIR)
 
 elif cat == "Chat":
@@ -305,79 +322,79 @@ elif cat == "Chat":
 
 elif cat == "Social":
     sub_soc = st.radio(
-        "NavegaÃ§Ã£o Social:",
-        ["ðŸŒ Navegar", "âœï¸ Postar", "ðŸ‘¤ Perfil & Membros"],
+        "NavegaÃƒÂ§ÃƒÂ£o Social:",
+        ["Ã°Å¸Å’Â Navegar", "Ã¢Å“ÂÃ¯Â¸Â Postar", "Ã°Å¸â€˜Â¤ Perfil & Membros"],
         horizontal=True,
         label_visibility="collapsed",
         key="radio_sub_social"
     )
-    if sub_soc == "ðŸŒ Navegar":
+    if sub_soc == "Ã°Å¸Å’Â Navegar":
         render_navegar(usuario_id, user, STORAGE_DIR)
-    elif sub_soc == "âœï¸ Postar":
+    elif sub_soc == "Ã¢Å“ÂÃ¯Â¸Â Postar":
         render_criar_post(usuario_id, user)
-    elif sub_soc == "ðŸ‘¤ Perfil & Membros":
+    elif sub_soc == "Ã°Å¸â€˜Â¤ Perfil & Membros":
         render_perfil_avatar(usuario_id, user)
-    elif sub_soc == "ðŸ’¬ Mensagens & Salas":
+    elif sub_soc == "Ã°Å¸â€™Â¬ Mensagens & Salas":
         render_messages(usuario_id, user)
 
-elif cat == "MultimÃ­dia":
+elif cat == "MultimÃƒÂ­dia":
     sub_mid = st.radio(
-        "NavegaÃ§Ã£o MultimÃ­dia:",
-        ["ðŸ“¥ Central de MÃ­dia", "ðŸ¿ Assistir Juntos"],
+        "NavegaÃƒÂ§ÃƒÂ£o MultimÃƒÂ­dia:",
+        ["Ã°Å¸â€œÂ¥ Central de MÃƒÂ­dia", "Ã°Å¸ÂÂ¿ Assistir Juntos"],
         horizontal=True,
         label_visibility="collapsed",
         key="radio_sub_midia"
     )
-    if sub_mid == "ðŸ“¥ Central de MÃ­dia":
+    if sub_mid == "Ã°Å¸â€œÂ¥ Central de MÃƒÂ­dia":
         render_media(STORAGE_DIR)
     else:
         render_watch_party(usuario_id, user, STORAGE_DIR)
 
 elif cat == "Arquivos":
     sub_arq = st.radio(
-        "NavegaÃ§Ã£o Arquivos:",
-        ["ðŸ“‚ OMNIX Drive", "ðŸ”„ Conversor Universal"],
+        "NavegaÃƒÂ§ÃƒÂ£o Arquivos:",
+        ["Ã°Å¸â€œâ€š OMNIX Drive", "Ã°Å¸â€â€ž Conversor Universal"],
         horizontal=True,
         label_visibility="collapsed",
         key="radio_sub_arquivos"
     )
-    if sub_arq == "ðŸ“‚ OMNIX Drive":
+    if sub_arq == "Ã°Å¸â€œâ€š OMNIX Drive":
         render_files(STORAGE_DIR, user["cargo"])
     else:
         render_converter(STORAGE_DIR)
 
-elif cat == "InteligÃªncia Artificial":
+elif cat == "InteligÃƒÂªncia Artificial":
     sub_ia = st.radio(
-        "NavegaÃ§Ã£o IA:",
-        ["ðŸ¤– OMNIX IA", "ðŸ‘ï¸ OMNIX Vision IA"],
+        "NavegaÃƒÂ§ÃƒÂ£o IA:",
+        ["Ã°Å¸Â¤â€“ OMNIX IA", "Ã°Å¸â€˜ÂÃ¯Â¸Â OMNIX Vision IA"],
         horizontal=True,
         label_visibility="collapsed",
         key="radio_sub_ia"
     )
-    if sub_ia == "ðŸ¤– OMNIX IA":
+    if sub_ia == "Ã°Å¸Â¤â€“ OMNIX IA":
         render_bot_hub(usuario_id, user)
     else:
         render_vision(user["cargo"])
 
-elif cat == "NotificaÃ§Ãµes":
+elif cat == "NotificaÃƒÂ§ÃƒÂµes":
     c1, c2 = st.columns([3.5, 1.5])
-    c1.subheader("ðŸ”” NotificaÃ§Ãµes")
-    if nao_lidas > 0 and c2.button("âœ… Marcar todas como lidas", type="primary", width="stretch"):
+    c1.subheader("Ã°Å¸â€â€ NotificaÃƒÂ§ÃƒÂµes")
+    if nao_lidas > 0 and c2.button("Ã¢Å“â€¦ Marcar todas como lidas", type="primary", width="stretch"):
         marcar_todas_como_lidas(usuario_id)
         st.rerun()
     if not notificacoes:
-        st.info("Nenhuma notificaÃ§Ã£o recente no momento.")
+        st.info("Nenhuma notificaÃƒÂ§ÃƒÂ£o recente no momento.")
     else:
         for n in notificacoes:
             nova = usuario_id not in n.get("lido_por", [])
             with st.container(border=True):
-                st.markdown(f"{'ðŸŸ£ ' if nova else ''}**{n['tipo']}** â€¢ **{n['autor_nome']}** {n['descricao']}")
-                st.caption(f"ðŸ•’ {n['hora']}")
+                st.markdown(f"{'Ã°Å¸Å¸Â£ ' if nova else ''}**{n['tipo']}** Ã¢â‚¬Â¢ **{n['autor_nome']}** {n['descricao']}")
+                st.caption(f"Ã°Å¸â€¢â€™ {n['hora']}")
 
-elif cat == "ConfiguraÃ§Ãµes":
+elif cat == "ConfiguraÃƒÂ§ÃƒÂµes":
     render_configuracoes(usuario_id)
 
-elif cat == "AdministraÃ§Ã£o":
+elif cat == "AdministraÃƒÂ§ÃƒÂ£o":
     if user["cargo"] == "admin":
         render_admin(STORAGE_DIR, usuario_id)
     else:
