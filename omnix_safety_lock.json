@@ -1,0 +1,7 @@
+{
+  "ativa": true,
+  "max_arquivos_lote": 8,
+  "max_mb_arquivo": 25,
+  "max_dimensao_px": 2560,
+  "max_qualidade_video": "720"
+}
