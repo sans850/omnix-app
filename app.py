@@ -1,4 +1,4 @@
-﻿import streamlit as st
+import streamlit as st
 from pathlib import Path
 import time
 import hashlib
@@ -28,8 +28,6 @@ from modules.friends import listar_pedidos_recebidos
 st.set_page_config(
     page_title="OMNIX",
     page_icon="omnix_icon.png" if Path("omnix_icon.png")
-import streamlit.components.v1 as _stc
-st.markdown('<meta name="google" content="notranslate">', unsafe_allow_html=True)
 _stc.html("""
 <script>
 (function() {
