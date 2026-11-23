@@ -1,0 +1,130 @@
+{
+    "['admin', 'sara']__['admin', 'sara']": [
+        {
+            "msg_id": 1795407035301,
+            "id": "sara",
+            "nome": "Sara",
+            "texto": "@omnix ajuda",
+            "anexo": "",
+            "emoji_custom": "",
+            "audio": "",
+            "hora": "23/11 01:10"
+        },
+        {
+            "msg_id": 1795407147698,
+            "id": "sara",
+            "nome": "Sara",
+            "texto": "@omnix",
+            "anexo": "",
+            "emoji_custom": "",
+            "audio": "",
+            "hora": "23/11 01:12"
+        },
+        {
+            "msg_id": 1795407284021,
+            "id": "sara",
+            "nome": "Sara",
+            "texto": "@omnix baixar <link>",
+            "anexo": "",
+            "emoji_custom": "",
+            "audio": "",
+            "hora": "23/11 01:14"
+        },
+        {
+            "msg_id": 1795407293322,
+            "id": "sara",
+            "nome": "Sara",
+            "texto": "@omnix baixar <link>",
+            "anexo": "",
+            "emoji_custom": "",
+            "audio": "",
+            "hora": "23/11 01:14"
+        }
+    ],
+    "['admin', 'omnix_bot']__['admin', 'omnix_bot']": [
+        {
+            "msg_id": 1795407035317,
+            "id": "omnix_bot",
+            "nome": "OMNIX Bot",
+            "texto": [
+                "🤖 **Comandos de Automação do OMNIX Bot:**\n• `@omnix baixar <link>` — Baixa vídeo MP4 direto para o Drive/Media.\n• `@omnix mp3 <link>` — Extrai o áudio MP3 de um link do YouTube.\n• `@omnix figurinha <nome>` *(com imagem anexada)* — Cria uma figurinha especial na hora.\n• `@omnix converter png/jpg/webp` *(com imagem anexada)* — Converte o arquivo e salva no Drive.\n• `@omnix <pergunta>` — Conversa e tira dúvidas com Inteligência Artificial.",
+                ""
+            ],
+            "anexo": "",
+            "emoji_custom": "",
+            "audio": "",
+            "hora": "23/11 01:10"
+        },
+        {
+            "msg_id": 1795411813871,
+            "id": "omnix_bot",
+            "nome": "OMNIX Bot",
+            "texto": [
+                "🕒 **Horário atual:** `23/11/2026 às 02:30:13`",
+                ""
+            ],
+            "anexo": "",
+            "emoji_custom": "",
+            "audio": "",
+            "hora": "23/11 02:30"
+        },
+        {
+            "msg_id": 1795412000828,
+            "id": "omnix_bot",
+            "nome": "OMNIX Bot",
+            "texto": [
+                "🕒 **Horário atual:** `23/11/2026 às 02:33:20`",
+                ""
+            ],
+            "anexo": "",
+            "emoji_custom": "",
+            "audio": "",
+            "hora": "23/11 02:33"
+        },
+        {
+            "msg_id": 1795412289695,
+            "id": "omnix_bot",
+            "nome": "OMNIX Bot",
+            "texto": [
+                "🕒 **Horário atual:** `23/11/2026 às 02:38:09`",
+                ""
+            ],
+            "anexo": "",
+            "emoji_custom": "",
+            "audio": "",
+            "hora": "23/11 02:38"
+        }
+    ],
+    "['admin', 'santris']__['admin', 'santris']": [
+        {
+            "msg_id": 1795411813852,
+            "id": "santris",
+            "nome": "Santris",
+            "texto": "Teste automático de diagnóstico @omnix horario",
+            "anexo": "",
+            "emoji_custom": "",
+            "audio": "",
+            "hora": "23/11 02:30"
+        },
+        {
+            "msg_id": 1795412000806,
+            "id": "santris",
+            "nome": "Santris",
+            "texto": "Teste automático de diagnóstico @omnix horario",
+            "anexo": "",
+            "emoji_custom": "",
+            "audio": "",
+            "hora": "23/11 02:33"
+        },
+        {
+            "msg_id": 1795412289674,
+            "id": "santris",
+            "nome": "Santris",
+            "texto": "Teste automático de diagnóstico @omnix horario",
+            "anexo": "",
+            "emoji_custom": "",
+            "audio": "",
+            "hora": "23/11 02:38"
+        }
+    ]
+}

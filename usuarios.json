@@ -1,0 +1,62 @@
+{
+    "admin": {
+        "senha": "123",
+        "cargo": "admin",
+        "nome": "Administrador",
+        "avatar": "",
+        "banner": "",
+        "bio": "Olá! Estou usando o OMNIX.",
+        "numero": "0001",
+        "cor_nome": "#818CF8",
+        "tag_nitro": "⚡",
+        "configs": {
+            "perfil_publico": false,
+            "mostrar_numero": true,
+            "aceitar_pedidos_amizade": true,
+            "notif_dm": true,
+            "notif_grupo": true,
+            "notif_posts": true,
+            "notif_amizade": true
+        }
+    },
+    "sara": {
+        "senha": "1234",
+        "cargo": "admin",
+        "nome": "Sara",
+        "avatar": "omnix_profiles\\avatar_sara.jpg",
+        "banner": "",
+        "bio": "Olá! Estou usando o OMNIX.",
+        "numero": "0002",
+        "cor_nome": "#f900d6",
+        "tag_nitro": "⚡",
+        "configs": {
+            "perfil_publico": false,
+            "mostrar_numero": true,
+            "aceitar_pedidos_amizade": true,
+            "notif_dm": true,
+            "notif_grupo": true,
+            "notif_posts": true,
+            "notif_amizade": true
+        }
+    },
+    "santris": {
+        "senha": "123456",
+        "cargo": "membro",
+        "nome": "Santris",
+        "avatar": "omnix_profiles\\avatar_santris.jpg",
+        "banner": "",
+        "bio": "Olá! Estou usando o OMNIX.",
+        "numero": "0003",
+        "cor_nome": "#818CF8",
+        "tag_nitro": "⚡",
+        "configs": {
+            "perfil_publico": false,
+            "mostrar_numero": true,
+            "aceitar_pedidos_amizade": true,
+            "notif_dm": true,
+            "notif_grupo": true,
+            "notif_posts": true,
+            "notif_amizade": true
+        }
+    }
+}

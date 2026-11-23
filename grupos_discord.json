@@ -1,0 +1,213 @@
+{
+    "grp_geral": {
+        "nome": "Comunidade OMNIX",
+        "dono": "admin",
+        "membros": [
+            "admin",
+            "grupo",
+            "sara",
+            "santris"
+        ],
+        "canais": {
+            "geral": [
+                {
+                    "id": "sara",
+                    "nome": "Sara",
+                    "cargo": "admin",
+                    "texto": "oi",
+                    "hora": "22/11 23:20"
+                },
+                {
+                    "id": "santris",
+                    "nome": "Santris",
+                    "cargo": "membro",
+                    "texto": "Safadezas",
+                    "hora": "22/11 23:24"
+                },
+                {
+                    "id": "sara",
+                    "nome": "Sara",
+                    "cargo": "admin",
+                    "texto": "rapaz",
+                    "hora": "22/11 23:34"
+                },
+                {
+                    "id": "sara",
+                    "nome": "Sara",
+                    "cargo": "admin",
+                    "texto": "rapaz",
+                    "hora": "22/11 23:34"
+                },
+                {
+                    "id": "sara",
+                    "nome": "Sara",
+                    "cargo": "admin",
+                    "texto": "oi",
+                    "hora": "22/11 23:35"
+                },
+                {
+                    "id": "sara",
+                    "nome": "Sara",
+                    "cargo": "admin",
+                    "texto": "rapaz",
+                    "hora": "22/11 23:35"
+                },
+                {
+                    "id": "santris",
+                    "nome": "Santris",
+                    "cargo": "membro",
+                    "texto": "Fudido de merda",
+                    "hora": "22/11 23:36"
+                },
+                {
+                    "msg_id": 1795405720337,
+                    "id": "sara",
+                    "nome": "Sara",
+                    "cargo": "admin",
+                    "texto": "",
+                    "anexo": "",
+                    "emoji_custom": "omnix_emojis\\emoji_9s.png",
+                    "reply": {},
+                    "reacoes": {},
+                    "hora": "23/11 00:48"
+                },
+                {
+                    "msg_id": 1795405722961,
+                    "id": "sara",
+                    "nome": "Sara",
+                    "cargo": "admin",
+                    "texto": "",
+                    "anexo": "",
+                    "emoji_custom": "omnix_emojis\\emoji_9s.png",
+                    "reply": {},
+                    "reacoes": {},
+                    "hora": "23/11 00:48"
+                },
+                {
+                    "msg_id": 1795405732523,
+                    "id": "sara",
+                    "nome": "Sara",
+                    "cargo": "admin",
+                    "texto": ":9s:",
+                    "anexo": "",
+                    "emoji_custom": "",
+                    "reply": {},
+                    "reacoes": {},
+                    "hora": "23/11 00:48"
+                },
+                {
+                    "msg_id": 1795405756512,
+                    "id": "sara",
+                    "nome": "Sara",
+                    "cargo": "admin",
+                    "texto": ":9s:",
+                    "anexo": "",
+                    "emoji_custom": "",
+                    "reply": {},
+                    "reacoes": {},
+                    "hora": "23/11 00:49"
+                },
+                {
+                    "msg_id": 1795405763599,
+                    "id": "sara",
+                    "nome": "Sara",
+                    "cargo": "admin",
+                    "texto": "",
+                    "anexo": "",
+                    "emoji_custom": "omnix_emojis\\emoji_9s.png",
+                    "reply": {},
+                    "reacoes": {},
+                    "hora": "23/11 00:49"
+                },
+                {
+                    "msg_id": 1795405774867,
+                    "id": "sara",
+                    "nome": "Sara",
+                    "cargo": "admin",
+                    "texto": "",
+                    "anexo": "",
+                    "emoji_custom": "omnix_emojis\\emoji_9s.png",
+                    "reply": {},
+                    "reacoes": {},
+                    "hora": "23/11 00:49"
+                },
+                {
+                    "msg_id": 1795405777700,
+                    "id": "sara",
+                    "nome": "Sara",
+                    "cargo": "admin",
+                    "texto": "oi",
+                    "anexo": "",
+                    "emoji_custom": "",
+                    "reply": {},
+                    "reacoes": {},
+                    "hora": "23/11 00:49"
+                },
+                {
+                    "msg_id": 1795405903071,
+                    "id": "sara",
+                    "nome": "Sara",
+                    "cargo": "admin",
+                    "texto": "oi",
+                    "anexo": "",
+                    "emoji_custom": "omnix_emojis\\emoji_9s.png",
+                    "reply": {},
+                    "reacoes": {},
+                    "hora": "23/11 00:51"
+                },
+                {
+                    "msg_id": 1795405922569,
+                    "id": "sara",
+                    "nome": "Sara",
+                    "cargo": "admin",
+                    "texto": "fdp",
+                    "anexo": "",
+                    "emoji_custom": "omnix_emojis\\emoji_9s.png",
+                    "reply": {},
+                    "reacoes": {},
+                    "hora": "23/11 00:52"
+                },
+                {
+                    "msg_id": 1795406040403,
+                    "id": "sara",
+                    "nome": "Sara",
+                    "cargo": "admin",
+                    "texto": "",
+                    "anexo": "",
+                    "emoji_custom": "omnix_emojis\\emoji_9s.png",
+                    "reply": {},
+                    "reacoes": {},
+                    "hora": "23/11 00:54"
+                }
+            ],
+            "clips-e-midia": [],
+            "off-topic": []
+        },
+        "cargos": {},
+        "membros_cargos": {}
+    },
+    "grp_1795406425674": {
+        "nome": "Sara",
+        "dono": "sara",
+        "membros": [
+            "sara"
+        ],
+        "cargos": {
+            "moderador": {
+                "nome": "Moderador",
+                "cor": "#10B981",
+                "perms": [
+                    "apagar_msg",
+                    "convidar",
+                    "gerenciar_canais"
+                ]
+            }
+        },
+        "membros_cargos": {},
+        "canais": {
+            "geral": [],
+            "clips-e-midia": [],
+            "off-topic": []
+        }
+    }
+}

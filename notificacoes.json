@@ -1,0 +1,306 @@
+[
+    {
+        "id": 1795401259474,
+        "autor_id": "sara",
+        "autor_nome": "Sara",
+        "tipo": "💬 Chat",
+        "descricao": "enviou uma mensagem: 'rapaz'",
+        "hora": "22/11 23:34",
+        "lido_por": [
+            "sara",
+            "santris"
+        ]
+    },
+    {
+        "id": 1795401268303,
+        "autor_id": "sara",
+        "autor_nome": "Sara",
+        "tipo": "💬 Chat",
+        "descricao": "enviou uma mensagem: 'rapaz'",
+        "hora": "22/11 23:34",
+        "lido_por": [
+            "sara",
+            "santris"
+        ]
+    },
+    {
+        "id": 1795401354235,
+        "autor_id": "sara",
+        "autor_nome": "Sara",
+        "tipo": "💬 Chat",
+        "descricao": "enviou uma mensagem: 'oi'",
+        "hora": "22/11 23:35",
+        "lido_por": [
+            "sara",
+            "santris"
+        ]
+    },
+    {
+        "id": 1795401357636,
+        "autor_id": "sara",
+        "autor_nome": "Sara",
+        "tipo": "💬 Chat",
+        "descricao": "enviou uma mensagem: 'rapaz'",
+        "hora": "22/11 23:35",
+        "lido_por": [
+            "sara",
+            "santris"
+        ]
+    },
+    {
+        "id": 1795401371204,
+        "autor_id": "santris",
+        "autor_nome": "Santris",
+        "tipo": "💬 Chat",
+        "descricao": "enviou uma mensagem: 'Fudido de merda'",
+        "hora": "22/11 23:36",
+        "lido_por": [
+            "santris",
+            "sara"
+        ]
+    },
+    {
+        "id": 1795403299590,
+        "autor_id": "sara",
+        "autor_nome": "Sara",
+        "tipo": "🤝 Amizade",
+        "descricao": "enviou um pedido de amizade para você!",
+        "hora": "23/11 00:08",
+        "lido_por": [
+            "sara",
+            "santris"
+        ]
+    },
+    {
+        "id": 1795405720340,
+        "autor_id": "sara",
+        "autor_nome": "Sara",
+        "tipo": "🏰 Comunidade OMNIX",
+        "descricao": "enviou em #geral: ''",
+        "hora": "23/11 00:48",
+        "lido_por": [
+            "sara"
+        ]
+    },
+    {
+        "id": 1795405722965,
+        "autor_id": "sara",
+        "autor_nome": "Sara",
+        "tipo": "🏰 Comunidade OMNIX",
+        "descricao": "enviou em #geral: ''",
+        "hora": "23/11 00:48",
+        "lido_por": [
+            "sara"
+        ]
+    },
+    {
+        "id": 1795405732526,
+        "autor_id": "sara",
+        "autor_nome": "Sara",
+        "tipo": "🏰 Comunidade OMNIX",
+        "descricao": "enviou em #geral: ':9s:'",
+        "hora": "23/11 00:48",
+        "lido_por": [
+            "sara"
+        ]
+    },
+    {
+        "id": 1795405756514,
+        "autor_id": "sara",
+        "autor_nome": "Sara",
+        "tipo": "🏰 Comunidade OMNIX",
+        "descricao": "enviou em #geral: ':9s:'",
+        "hora": "23/11 00:49",
+        "lido_por": [
+            "sara"
+        ]
+    },
+    {
+        "id": 1795405763602,
+        "autor_id": "sara",
+        "autor_nome": "Sara",
+        "tipo": "🏰 Comunidade OMNIX",
+        "descricao": "enviou em #geral: ''",
+        "hora": "23/11 00:49",
+        "lido_por": [
+            "sara"
+        ]
+    },
+    {
+        "id": 1795405774869,
+        "autor_id": "sara",
+        "autor_nome": "Sara",
+        "tipo": "🏰 Comunidade OMNIX",
+        "descricao": "enviou em #geral: ''",
+        "hora": "23/11 00:49",
+        "lido_por": [
+            "sara"
+        ]
+    },
+    {
+        "id": 1795405777702,
+        "autor_id": "sara",
+        "autor_nome": "Sara",
+        "tipo": "🏰 Comunidade OMNIX",
+        "descricao": "enviou em #geral: 'oi'",
+        "hora": "23/11 00:49",
+        "lido_por": [
+            "sara"
+        ]
+    },
+    {
+        "id": 1795405903073,
+        "autor_id": "sara",
+        "autor_nome": "Sara",
+        "tipo": "🏰 Comunidade OMNIX",
+        "descricao": "enviou em #geral: 'oi'",
+        "hora": "23/11 00:51",
+        "lido_por": [
+            "sara"
+        ]
+    },
+    {
+        "id": 1795405922571,
+        "autor_id": "sara",
+        "autor_nome": "Sara",
+        "tipo": "🏰 Comunidade OMNIX",
+        "descricao": "enviou em #geral: 'fdp'",
+        "hora": "23/11 00:52",
+        "lido_por": [
+            "sara"
+        ]
+    },
+    {
+        "id": 1795406040406,
+        "autor_id": "sara",
+        "autor_nome": "Sara",
+        "tipo": "🏰 Comunidade OMNIX",
+        "descricao": "enviou em #geral: ''",
+        "hora": "23/11 00:54",
+        "lido_por": [
+            "sara"
+        ]
+    },
+    {
+        "id": 1795407035305,
+        "autor_id": "sara",
+        "autor_nome": "Sara",
+        "tipo": "🔒 DM Privada",
+        "descricao": "te enviou uma mensagem direta.",
+        "hora": "23/11 01:10",
+        "lido_por": [
+            "sara"
+        ]
+    },
+    {
+        "id": 1795407035332,
+        "autor_id": "omnix_bot",
+        "autor_nome": "OMNIX Bot",
+        "tipo": "🔒 DM Privada",
+        "descricao": "te enviou uma mensagem direta.",
+        "hora": "23/11 01:10",
+        "lido_por": [
+            "omnix_bot",
+            "sara"
+        ]
+    },
+    {
+        "id": 1795407147700,
+        "autor_id": "sara",
+        "autor_nome": "Sara",
+        "tipo": "🔒 DM Privada",
+        "descricao": "te enviou uma mensagem direta.",
+        "hora": "23/11 01:12",
+        "lido_por": [
+            "sara"
+        ]
+    },
+    {
+        "id": 1795407284023,
+        "autor_id": "sara",
+        "autor_nome": "Sara",
+        "tipo": "🔒 DM Privada",
+        "descricao": "te enviou uma mensagem direta.",
+        "hora": "23/11 01:14",
+        "lido_por": [
+            "sara"
+        ]
+    },
+    {
+        "id": 1795407293324,
+        "autor_id": "sara",
+        "autor_nome": "Sara",
+        "tipo": "🔒 DM Privada",
+        "descricao": "te enviou uma mensagem direta.",
+        "hora": "23/11 01:14",
+        "lido_por": [
+            "sara"
+        ]
+    },
+    {
+        "id": 1795411813855,
+        "autor_id": "santris",
+        "autor_nome": "Santris",
+        "tipo": "🔒 DM Privada",
+        "descricao": "te enviou uma mensagem direta.",
+        "hora": "23/11 02:30",
+        "lido_por": [
+            "santris"
+        ]
+    },
+    {
+        "id": 1795411813896,
+        "autor_id": "omnix_bot",
+        "autor_nome": "OMNIX Bot",
+        "tipo": "🔒 DM Privada",
+        "descricao": "te enviou uma mensagem direta.",
+        "hora": "23/11 02:30",
+        "lido_por": [
+            "omnix_bot"
+        ]
+    },
+    {
+        "id": 1795412000808,
+        "autor_id": "santris",
+        "autor_nome": "Santris",
+        "tipo": "🔒 DM Privada",
+        "descricao": "te enviou uma mensagem direta.",
+        "hora": "23/11 02:33",
+        "lido_por": [
+            "santris"
+        ]
+    },
+    {
+        "id": 1795412000843,
+        "autor_id": "omnix_bot",
+        "autor_nome": "OMNIX Bot",
+        "tipo": "🔒 DM Privada",
+        "descricao": "te enviou uma mensagem direta.",
+        "hora": "23/11 02:33",
+        "lido_por": [
+            "omnix_bot"
+        ]
+    },
+    {
+        "id": 1795412289677,
+        "autor_id": "santris",
+        "autor_nome": "Santris",
+        "tipo": "🔒 DM Privada",
+        "descricao": "te enviou uma mensagem direta.",
+        "hora": "23/11 02:38",
+        "lido_por": [
+            "santris"
+        ]
+    },
+    {
+        "id": 1795412289708,
+        "autor_id": "omnix_bot",
+        "autor_nome": "OMNIX Bot",
+        "tipo": "🔒 DM Privada",
+        "descricao": "te enviou uma mensagem direta.",
+        "hora": "23/11 02:38",
+        "lido_por": [
+            "omnix_bot"
+        ]
+    }
+]

@@ -1,0 +1,11 @@
+{
+    "amigos": {
+        "santris": [
+            "sara"
+        ],
+        "sara": [
+            "santris"
+        ]
+    },
+    "pendentes": []
+}
