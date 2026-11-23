@@ -35,7 +35,7 @@ st.set_page_config(
 ativar_lightbox_global()
 
 st.html("""
-<style>
+<meta name="google" content="notranslate"><script>document.documentElement.setAttribute("translate", "no");</script><style>
     header[data-testid='stHeader'], [data-testid='stSkillsNudgeAnchor'] { display: none !important; }
     [data-testid='StyledFullScreenButton'] { display: none !important; }
         button[title="View fullscreen"],
@@ -361,6 +361,7 @@ elif cat == "Administração":
         render_admin(STORAGE_DIR, usuario_id)
     else:
         st.error("Acesso restrito aos administradores autorizados.")
+
 
 
 
