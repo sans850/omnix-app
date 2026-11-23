@@ -27,7 +27,23 @@ from modules.friends import listar_pedidos_recebidos
 
 st.set_page_config(
     page_title="OMNIX",
-    page_icon="omnix_icon.png" if Path("omnix_icon.png").exists() else "⚡",
+    page_icon="omnix_icon.png" if Path("omnix_icon.png")
+import streamlit.components.v1 as _stc
+st.markdown('<meta name="google" content="notranslate">', unsafe_allow_html=True)
+_stc.html("""
+<script>
+(function() {
+  const p = window.parent.document;
+  p.documentElement.setAttribute('translate', 'no');
+  p.documentElement.classList.add('notranslate');
+  const origRemove = window.parent.Node.prototype.removeChild;
+  window.parent.Node.prototype.removeChild = function(child) {
+    if (child && child.parentNode !== this) { return child; }
+    return origRemove.apply(this, arguments);
+  };
+})();
+</script>
+""", height=0, width=0).exists() else "⚡",
     layout="wide",
     initial_sidebar_state="collapsed"
 )
@@ -361,6 +377,7 @@ elif cat == "Administração":
         render_admin(STORAGE_DIR, usuario_id)
     else:
         st.error("Acesso restrito aos administradores autorizados.")
+
 
 
 
